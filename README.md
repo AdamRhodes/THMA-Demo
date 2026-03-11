@@ -282,31 +282,8 @@ pipeline.log
 
 ---
 
-## What to Emphasize in the Interview
-
-1. **REST API fluency**: "I consumed the Salesforce REST API for extraction and built my own API with FastAPI to serve the data. I understand authentication, endpoints, error handling, and pagination on both sides."
-
-2. **Data pipeline design**: "The pipeline follows a clean ETL pattern with separation of concerns. Each phase is independently testable. The MERGE/upsert pattern handles both new and updated records idempotently."
-
-3. **Error handling & monitoring**: "I built in retry logic with exponential backoff for transient API failures, structured logging to both console and file, and a sync_log table that tracks every pipeline run - records extracted, loaded, and any errors."
-
-4. **Data modeling**: "I designed the SQL schema to mirror the Salesforce object model while optimizing for reporting queries. The views provide denormalized data ready for Power BI. Indexes target the most common filter patterns."
-
-5. **Power Query**: "When I connected Power BI to Azure SQL, I used Power Query Editor to do additional transforms — renaming columns for business users, filtering nulls, merging tables with joins, and creating custom columns with conditional logic. The Applied Steps panel is basically a visual transform pipeline, like a low-code version of pandas. I understand that M language handles data prep while DAX handles calculations and measures."
-
-6. **Power Automate**: "I built a scheduled cloud flow that triggers my sync pipeline and sends email alerts on success or failure. The visual builder is intuitive — connectors abstract away the REST API details, and the run history gives you built-in monitoring. I can see how THMA would use this for lighter automation like approval workflows, notifications, and file routing between SaaS apps."
-
-7. **Tray.io / iPaaS concepts**: "I haven't used Tray.io directly, but I understand it fills the iPaaS role — a visual platform for building the same integration logic I wrote in Python: connecting APIs, mapping data between schemas, handling errors, and scheduling syncs. The concepts are identical. My Python pipeline is essentially a code-first version of what Tray.io does with a drag-and-drop interface. I'd ramp up on the visual builder quickly because I already understand the underlying architecture — auth flows, webhooks, data transformation, retry logic. In practice, you'd choose between code (Python) and iPaaS (Tray.io) depending on the complexity: Tray.io for standard connector-to-connector flows, Python for heavy transforms or custom logic."
-
-8. **Adaptability**: "If THMA needed to add a new data source like Cvent or NetSuite, the architecture supports it — add a new extract module, transform module, and table. The pattern is the same. In Power Automate or Tray.io, it's the same idea: add a new connector and wire it into the existing flow."
-
----
-
 ## THMA SaaS Ecosystem — API Cheat Sheet
 
-You won't have hands-on time with all of these tonight, but if the interviewer
-asks "how would you approach integrating X?" you should be able to speak to each
-one. Here's what you need to know:
 
 ### Salesforce (CRM) — You Built This
 
