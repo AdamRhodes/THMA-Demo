@@ -1,0 +1,10 @@
+simple-salesforce>=1.12,<2
+pandas>=2.0,<3
+sqlalchemy>=2.0,<3
+pyodbc>=5.0,<6
+fastapi>=0.110,<1
+uvicorn[standard]>=0.27,<1
+pydantic-settings>=2.0,<3
+python-dotenv>=1.0,<2
+pytest>=8.0,<9
+httpx>=0.27,<1
